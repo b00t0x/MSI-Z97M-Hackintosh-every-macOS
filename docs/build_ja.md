@@ -123,7 +123,7 @@ Tiger においては、少なくとも Haswell 世代のマザーボードで�
 
 現在 Tiger の custom kernel を入手することは難しいが、例えば archive.org から入手できる [XxX OS x86 10.4.11](https://archive.org/details/xxxosx8610point4point11rev2_202007) から custom kernel を取り出すことができる。
 
-本ビルドでは [8.9.1 kernel SSE3 apr18](./Kernels/mach_kernel) を利用しており、これは 10.4.9 の custom kernel となるが、10.4.10 / 10.4.11 も起動することができる。8.10.1 以降の custom kernel では vanilla kernel と同じ症状になり利用できなかった。また、10.4.9 の vanilla kernel も同様に利用できない。
+本ビルドでは [8.9.1 kernel SSE3 apr18](../Kernels/mach_kernel) を利用しており、これは 10.4.9 の custom kernel となるが、10.4.10 / 10.4.11 も起動することができる。8.10.1 以降の custom kernel では vanilla kernel と同じ症状になり利用できなかった。また、10.4.9 の vanilla kernel も同様に利用できない。
 
 ESP に `Kernels/mach_kernel` のディレクトリ構造で custom kernel を配置し、config.plist で `CustomKernel` を有効にすることで適用できるが、Tiger 以外のバージョンにも適用され起動できなくなってしまうので、`CustomKernel` は使用せず直接 Tiger のボリュームに配置する。
 
@@ -186,7 +186,8 @@ IONetworkingFamily.kext を強制ロードしないと AtherosE2200Ethernet.kext
 
 ### PlatformInfo
 #### Generic
-[config_noserial.plist](./EFI/OC/config_noserial.plist) では `SystemSerialNumber` を設定していないため、[OCAuxiliaryTools](https://github.com/ic005k/OCAuxiliaryTools) などを利用して設定すること。
+[config_noserial.plist](../EFI/OC/config_noserial.plist) では `SystemSerialNumber` を設定していないため、[OCAuxiliaryTools](https://github.com/ic005k/OCAuxiliaryTools) などを利用して設定すること。
+
 
 ## UEFI settings
 * SATA Mode - IDE Mode

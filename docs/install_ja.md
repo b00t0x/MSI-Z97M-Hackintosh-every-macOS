@@ -103,7 +103,7 @@ Haswell 世代のマザーボードでは AppleAHCIPort.kext が panic するた
 3. インストール先のボリュームを選択しインストールする
 4. [Mac OS X 10.4.11 Update (Intel)](https://support.apple.com/kb/DL171) を対象ボリュームにインストールする
 5. [Security Update 2009-005 (Tiger Intel)](https://support.apple.com/kb/DL932) を対象ボリュームにインストールする
-6. `mach_kernel` を [custom kernel](./Kernels/mach_kernel) に置換する  
+6. `mach_kernel` を [custom kernel](../Kernels/mach_kernel) に置換する  
 `sudo cp /path/to/mach_kernel /Volumes/Vol_Name_of_Tiger/mach_kernel`
 
 以上により起動するが、[ディスプレイケーブルの抜き差し](./build_ja.md#black-screen-problem-on-tiger)が必要になることに注意。

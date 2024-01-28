@@ -123,7 +123,7 @@ Note that the 8800 GTS lacks HDMI audio functionality, so it won't work regardle
 ## Kernel
 Unfortunately, I couldn't make run Tiger on a vanilla kernel (it boots without panic but gets stuck on a blue screen). Custom kernels from the early Hackintosh days are necessary.
 
-While obtaining Tiger custom kernels is challenging, one example is extracting the custom kernel from [XxX OS x86 10.4.11](https://archive.org/details/xxxosx8610point4point11rev2_202007). My build uses the [8.9.1 kernel SSE3 apr18](./Kernels/mach_kernel), which works for 10.4.10 and 10.4.11. Custom kernels from 8.10.1 onwards and vanilla kernels (including 10.4.9) aren't usable.
+While obtaining Tiger custom kernels is challenging, one example is extracting the custom kernel from [XxX OS x86 10.4.11](https://archive.org/details/xxxosx8610point4point11rev2_202007). My build uses the [8.9.1 kernel SSE3 apr18](../Kernels/mach_kernel), which works for 10.4.10 and 10.4.11. Custom kernels from 8.10.1 onwards and vanilla kernels (including 10.4.9) aren't usable.
 
 Custom kernel can be used by placing it on `Kernels/mach_kernel` path in the ESP and enabling `CustomKernel` in config.plist. But it causes boot failure with other macOS versions, so place the custom kernel directly in the Tiger volume without using `CustomKernel`.
 
