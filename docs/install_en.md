@@ -110,7 +110,7 @@ For Haswell generation motherboards, AppleAHCIPort.kext panics, so change the SA
 
 In this build, 10.5 - 10.9 is installed on PCIe AHCI SSD, 10.10 and later on NVMe SSD, and only 10.4 is installed on SATA SSD. However, even if the SATA SSD operates in IDE mode, installation is possible from 10.5 - 11. Therefore, having SATA SSD and NVMe SSD is sufficient, even if PCIe AHCI SSD is unavailable.
 
-Note: Using both IDE mode and PCIe AHCI SSD requires [an older BIOS or BIOS mod](./build_ja.md#bios-mod).
+Note: Using both IDE mode and PCIe AHCI SSD requires [an older BIOS or BIOS mod](./build_en.md#bios-mod).
 
 As the 10.4 installer USB cannot be booted, perform the installation from an environment running 10.5.
 
