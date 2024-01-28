@@ -1,5 +1,5 @@
 # MSI Z97M Hackintosh runs every macOS
-Hackintosh EFI and guide repo for running every Intel macOS versions from Tiger(10.4) to Sonoma(14)
+Hackintosh EFI and guide repo for running every Intel macOS versions from Tiger (10.4) to Sonoma (14)
 
 ![Alt text](images/desktop.png)
 
@@ -31,9 +31,9 @@ Hackintosh EFI and guide repo for running every Intel macOS versions from Tiger(
 
 ## Software
 ### macOS
-* macOS Sonoma 14.2.1 (23C71)
-* macOS Ventura 13.6.3 (22G436)
-* macOS Monterey 12.7.2 (21G1974)
+* macOS Sonoma 14.3 (23D56)
+* macOS Ventura 13.6.4 (22G513)
+* macOS Monterey 12.7.3 (21H1015)
 * macOS Big Sur 11.7.10(20G1427)
 * macOS Catalina 10.15.7 (19H2026)
 * macOS Mojave 10.14.6 (18G9323)
