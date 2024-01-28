@@ -54,6 +54,9 @@ Hackintosh EFI and guide repo for running every Intel macOS versions from Tiger(
 * [macOS Catalina Patcher](http://dosdude1.com/catalina/) 1.4.7
 * [macOS Mojave Patcher](http://dosdude1.com/mojave/) 1.3.7
 
+### BIOS
+* [1.9](https://www.msi.com/Motherboard/Z97M-GAMING/support) with [Samsung M.2 AHCI mod](https://winraid.level1techs.com/t/guide-how-to-get-m-2-pcie-connected-samsung-ahci-ssds-bootable/31221)
+
 ## Known issue
 * Lion (10.7)
   * 32bit boot not working

@@ -1,6 +1,14 @@
 # How to Build
 ( Translated from [Japanese](./build_ja.md) )
 
+- [Introduction](#introduction)
+- [Hardware](#hardware)
+- [Kexts](#kexts)
+- [Kernel](#kernel)
+- [OpenCore config.plist](#opencore-configplist)
+- [BIOS mod](#bios-mod)
+- [BIOS settings](#bios-settings)
+
 ## Introduction
 As of 2024, Hackintosh is facing its demise with the transition to Apple Silicon. In other words, considering past trends, macOS 15 or 16 is expected to be the final version of Intel macOS.
 
@@ -141,6 +149,8 @@ References:
 #### Quirks
 `RebuildAppleMemoryMap` is required for 10.6 and earlier, and `DevirtualiseMmio` is required for 10.4 / 10.5.
 
+In addition, with BIOS 1.9, `ForceExitBootServices` is necessary to boot 10.8 and earlier. This quirk is not required with BIOS 1.4.
+
 #### MmioWhitelist
 When enabling `DevirtualiseMmio`, 10.6 and later stop working. Adjustments to `MmioWhitelist` are required to prevent conflicts.
 
@@ -188,7 +198,14 @@ For details on `revpatch=sbvmm`, refer to [RestrictEvents](https://github.com/ac
 #### Generic
 In [config_noserial.plist](../EFI/OC/config_noserial.plist), `SystemSerialNumber` is not set. Use tools like [OCAuxiliaryTools](https://github.com/ic005k/OCAuxiliaryTools) to configure it.
 
-## UEFI settings
+## BIOS mod
+With BIOS version 1.6 and later, there is an issue where setting SATA to IDE mode causes PCIe AHCI SSD to become invisible to OpenCore. This problem does not occur with BIOS 1.4.
+
+To resolve this issue, a modded BIOS with a PCIe AHCI SSD module for BIOS 1.9 has been created and is being used following [this guide](https://winraid.level1techs.com/t/guide-how-to-get-m-2-pcie-connected-samsung-ahci-ssds-bootable/31221).
+
+Files for this BIOS mod can be found [here](../bios).
+
+## BIOS settings
 * SATA Mode - IDE Mode
 * XHCI Hand-off - Enabled
 * EHCI Hand-off - Enabled

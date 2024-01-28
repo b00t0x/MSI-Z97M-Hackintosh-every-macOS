@@ -3,6 +3,18 @@ macOS バージョンごとに、インストールの手順や注意点を記�
 
 各 macOS バージョンのインストーラー USB の作成方法については [OpenCore-Install-Guide](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/mac-install.html) を参照のこと。
 
+- [High Sierra (10.13)](#high-sierra-1013)
+- [Mojave (10.14)](#mojave-1014)
+- [Catalina (10.15)](#catalina-1015)
+- [Big Sur (11) to Sonoma (14)](#big-sur-11-to-sonoma-14)
+- [Sierra (10.12)](#sierra-1012)
+- [Yosemite (10.10) / El Capitan (10.11)](#yosemite-1010--el-capitan-1011)
+- [Mavericks (10.9)](#mavericks-109)
+- [Lion (10.7) / Mountain Lion (10.8)](#lion-107--mountain-lion-108)
+- [Snow Leopard (10.6)](#snow-leopard-106)
+- [Leopard (10.5)](#leopard-105)
+- [Tiger (10.4)](#tiger-104)
+
 ## High Sierra (10.13)
 [How to build](./build_ja.md) で示したように、全てのハードウェアと最も互換性の高い 10.13 からインストールしていくことをおすすめする。
 
@@ -95,6 +107,8 @@ Mavericks は 2024 年現在 Apple からインストーラーをダウンロー
 Haswell 世代のマザーボードでは AppleAHCIPort.kext が panic するため、BIOS で SATA コントローラーの動作モードを AHCI ではなく IDE モードに変更する。
 
 このビルドでは 10.5 - 10.9 を PCIe AHCI SSD に、10.10 以降を NVMe SSD にインストールしており、SATA SSD には 10.4 しかインストールしないためこの変更の影響を受けないが、IDE モードで動作する SATA SSD であっても 10.5 - 11 まではインストールができるため、PCIe AHCI SSD を入手できなくても SATA SSD と NVMe SSD が用意できれば問題ない。
+
+※ ただし IDE モードと PCIe AHCI SSD の併用には[古い BIOS か BIOS mod が必要になる](./build_ja.md#bios-mod)。
 
 10.4 のインストーラー USB を起動することができないため、10.5 が動作している環境からインストールを行う。
 

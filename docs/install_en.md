@@ -5,6 +5,18 @@ Installation procedures and notes for each macOS version. Note that these steps 
 
 Refer to [OpenCore-Install-Guide](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/mac-install.html) for creating the installer USB for each macOS version.
 
+- [High Sierra (10.13)](#high-sierra-1013)
+- [Mojave (10.14)](#mojave-1014)
+- [Catalina (10.15)](#catalina-1015)
+- [Big Sur (11) to Sonoma (14)](#big-sur-11-to-sonoma-14)
+- [Sierra (10.12)](#sierra-1012)
+- [Yosemite (10.10) / El Capitan (10.11)](#yosemite-1010--el-capitan-1011)
+- [Mavericks (10.9)](#mavericks-109)
+- [Lion (10.7) / Mountain Lion (10.8)](#lion-107--mountain-lion-108)
+- [Snow Leopard (10.6)](#snow-leopard-106)
+- [Leopard (10.5)](#leopard-105)
+- [Tiger (10.4)](#tiger-104)
+
 ## High Sierra (10.13)
 As indicated in [How to build](./build_en.md), it is recommended to install from version 10.13, which has the highest compatibility with all hardware.
 
@@ -97,6 +109,8 @@ Installation of 10.4 is more complex than 10.5 and earlier.
 For Haswell generation motherboards, AppleAHCIPort.kext panics, so change the SATA controller operation mode in the BIOS from AHCI to IDE.
 
 In this build, 10.5 - 10.9 is installed on PCIe AHCI SSD, 10.10 and later on NVMe SSD, and only 10.4 is installed on SATA SSD. However, even if the SATA SSD operates in IDE mode, installation is possible from 10.5 - 11. Therefore, having SATA SSD and NVMe SSD is sufficient, even if PCIe AHCI SSD is unavailable.
+
+Note: Using both IDE mode and PCIe AHCI SSD requires [an older BIOS or BIOS mod](./build_ja.md#bios-mod).
 
 As the 10.4 installer USB cannot be booted, perform the installation from an environment running 10.5.
 

@@ -1,4 +1,12 @@
 # How to build
+- [はじめに](#はじめに)
+- [Hardware](#hardware)
+- [Kexts](#kexts)
+- [Kernel](#kernel)
+- [OpenCore config.plist](#opencore-configplist)
+- [BIOS mod](#bios-mod)
+- [BIOS settings](#bios-settings)
+
 ## はじめに
 2024 年現在、Hackintosh は Apple Silicon の登場により終焉を待つ状況になっている。つまり、過去の傾向を考えると macOS 15 か 16 あたりが Intel macOS の最終バージョンになると思われる。
 
@@ -141,6 +149,8 @@ config.plist を作成するにあたり、特に古い macOS を起動するた
 #### Quirks
 10.6 以前を起動するために `RebuildAppleMemoryMap` が、10.5 以前を起動するために `DevirtualiseMmio` が必要だった。
 
+また、BIOS 1.9 では `ForceExitBootServices` が 10.8 以下を起動するために必要だった。BIOS 1.4 では不要。
+
 #### MmioWhitelist
 `DevirtualiseMmio` を有効化すると、今度は 10.6 以降が起動しなくなる。これを回避するために、`MmioWhitelist` の調整が必要となった。
 
@@ -188,8 +198,14 @@ IONetworkingFamily.kext を強制ロードしないと AtherosE2200Ethernet.kext
 #### Generic
 [config_noserial.plist](../EFI/OC/config_noserial.plist) では `SystemSerialNumber` を設定していないため、[OCAuxiliaryTools](https://github.com/ic005k/OCAuxiliaryTools) などを利用して設定すること。
 
+## BIOS mod
+BIOS バージョン 1.6 以降では、SATA を IDE モードにすると PCIe AHCI SSD が OpenCore から見えなくなるという問題がある。BIOS 1.4 ではこの問題は発生しない。
 
-## UEFI settings
+この問題を解決するため、[このガイド](https://winraid.level1techs.com/t/guide-how-to-get-m-2-pcie-connected-samsung-ahci-ssds-bootable/31221)に従って BIOS 1.9 に PCIe AHCI SSD 用モジュールを導入した mod BIOS を作成して利用している。
+
+各種ファイルは[こちら](../bios)に用意した。
+
+## BIOS settings
 * SATA Mode - IDE Mode
 * XHCI Hand-off - Enabled
 * EHCI Hand-off - Enabled
