@@ -10,7 +10,7 @@
 ## はじめに
 2024 年現在、Hackintosh は Apple Silicon の登場により終焉を待つ状況になっている。つまり、過去の傾向を考えると macOS 15 か 16 あたりが Intel macOS の最終バージョンになると思われる。
 
-一方で、[OCLP](https://dortania.github.io/OpenCore-Legacy-Patcher/MODELS.html) では Leopard (10.5) 時代の Intel Mac であっても Sonoma (14) の動作がサポートされている。このことから、ハードウェアの構成次第では最初の Intel macOS である Tiger (10.4) から近い将来にリリースされる最後の Intel macOS までが動作する Hackintosh を構築することができるのでは？と考えた。
+一方で、[OCLP](https://dortania.github.io/OpenCore-Legacy-Patcher/MODELS.html) では Leopard (10.5) 時代の Intel Mac であっても Sequoia (15) の動作がサポートされている。このことから、ハードウェアの構成次第では最初の Intel macOS である Tiger (10.4) から近い将来にリリースされる最後の Intel macOS までが動作する Hackintosh を構築することができるのでは？と考えた。
 
 ## Hardware
 参考 : https://dortania.github.io/OpenCore-Install-Guide/macos-limits.html
@@ -18,6 +18,7 @@
 ### HCL
 |macOS|i7-4790K|8800 GTS|E2205|88E8053|NVMe|AHCI|ATA|ALC1150|
 |-----|--------|--------|-----|-------|----|----|---|-------|
+|15   |✅      |☑️ 3.    |✅    |☑️ 5.   |✅  |✅  |❌  |✅     |
 |14   |✅      |☑️ 3.    |✅    |☑️ 5.   |✅  |✅  |❌  |✅     |
 |13   |✅      |☑️ 3.    |✅    |☑️ 5.   |✅  |✅  |❌  |✅     |
 |12   |✅      |☑️ 3.    |✅    |☑️ 5.   |✅  |✅  |❌  |✅     |
@@ -86,7 +87,7 @@ Z97M Gaming のオンボード NIC は Atheros Killer E2205 だが、これは L
 
 Realtek RTL8111 シリーズは Tiger でも動作する可能性がある。ただ、Haswell のような新しいマザーボードでは RTL8111 のリビジョンが上がっているので、Tiger で動作するかは不明。
 
-Marvell Yukon 88E8053 は Tiger から kext が OOB で用意されている 1Gbps NIC である。オンボードで搭載されている例は少ないが、PCIe 拡張カードとして以前は流通していた。88E8053 の kext は Mojave (10.14) まで提供されており、Mojave の kext を利用することで Sonoma (14) であっても動作する優れた NIC である。
+Marvell Yukon 88E8053 は Tiger から kext が OOB で用意されている 1Gbps NIC である。オンボードで搭載されている例は少ないが、PCIe 拡張カードとして以前は流通していた。88E8053 の kext は Mojave (10.14) まで提供されており、Mojave の kext を利用することで Sequoia (15) であっても動作する優れた NIC である。
 
 ### SSD
 NVMe SSD は Yosemite (10.10) 以降でしか動作しないため、Mavericks (10.9) 以前では AHCI が必要になる。通常の SATA SSD でも問題ないが、XP941 / SM951 といった PCIe AHCI SSD が最良の選択肢となる。

@@ -6,7 +6,7 @@ macOS バージョンごとに、インストールの手順や注意点を記�
 - [High Sierra (10.13)](#high-sierra-1013)
 - [Mojave (10.14)](#mojave-1014)
 - [Catalina (10.15)](#catalina-1015)
-- [Big Sur (11) to Sonoma (14)](#big-sur-11-to-sonoma-14)
+- [Big Sur (11) to Sequoia (15)](#big-sur-11-to-sequoia-15)
 - [Sierra (10.12)](#sierra-1012)
 - [Yosemite (10.10) / El Capitan (10.11)](#yosemite-1010--el-capitan-1011)
 - [Mavericks (10.9)](#mavericks-109)
@@ -63,7 +63,7 @@ sudo vim /Volumes/Preboot/$UUID/Library/Preferences/SystemConfiguration/com.appl
 ```
 `Legacy Video Card Patch` にチェックを付け、`Change...` から 10.15 のボリュームを選択してパッチを適用する。
 
-## Big Sur (11) to Sonoma (14)
+## Big Sur (11) to Sequoia (15)
 macOS 11 以降では [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher) (OCLP) が使用できるためむしろ 10.14 / 10.15 より簡単になる。
 
 macOS インストール後、OCLP を起動し `Post-Install Root Patch` からパッチを適用すれば良い。

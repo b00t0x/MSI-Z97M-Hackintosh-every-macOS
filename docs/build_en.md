@@ -12,7 +12,7 @@
 ## Introduction
 As of 2024, Hackintosh is facing its demise with the transition to Apple Silicon. In other words, considering past trends, macOS 15 or 16 is expected to be the final version of Intel macOS.
 
-On the other hand, [OCLP](https://dortania.github.io/OpenCore-Legacy-Patcher/MODELS.html) supports Sonoma (14) even on Intel Macs from the Leopard (10.5) era. From this, I wondered if it would be possible to build a Hackintosh that runs from the first Intel macOS, Tiger (10.4), to the last Intel macOS released in the near future, depending on the hardware configuration.
+On the other hand, [OCLP](https://dortania.github.io/OpenCore-Legacy-Patcher/MODELS.html) supports Sequoia (15) even on Intel Macs from the Leopard (10.5) era. From this, I wondered if it would be possible to build a Hackintosh that runs from the first Intel macOS, Tiger (10.4), to the last Intel macOS released in the near future, depending on the hardware configuration.
 
 ## Hardware
 Reference: https://dortania.github.io/OpenCore-Install-Guide/macos-limits.html
@@ -20,6 +20,7 @@ Reference: https://dortania.github.io/OpenCore-Install-Guide/macos-limits.html
 ### HCL
 |macOS|i7-4790K|8800 GTS|E2205|88E8053|NVMe|AHCI|ATA|ALC1150|
 |-----|--------|--------|-----|-------|----|----|---|-------|
+|15   |✅      |☑️ 3.    |✅    |☑️ 5.   |✅  |✅  |❌  |✅     |
 |14   |✅      |☑️ 3.    |✅    |☑️ 5.   |✅  |✅  |❌  |✅     |
 |13   |✅      |☑️ 3.    |✅    |☑️ 5.   |✅  |✅  |❌  |✅     |
 |12   |✅      |☑️ 3.    |✅    |☑️ 5.   |✅  |✅  |❌  |✅     |
@@ -90,7 +91,7 @@ There are limited kexts for NICs that work on 32-bit kernels like Tiger and Leop
   * Even Intel NIC + IntelSnowMausi doesn't work on 32-bit kernels.
 * Realtek RTL8111 series might work on Tiger, but compatibility is uncertain with updated RTL8111 revisions on newer motherboards.
 
-Marvell Yukon 88E8053 is a 1Gbps NIC with an OOB kext in Tiger. It had limited onboard implementations but was available as a PCIe expansion card. The kext works up to Mojave (10.14), and using Mojave's kext allows it to work on Sonoma (14).
+Marvell Yukon 88E8053 is a 1Gbps NIC with an OOB kext in Tiger. It had limited onboard implementations but was available as a PCIe expansion card. The kext works up to Mojave (10.14), and using Mojave's kext allows it to work on Sequoia (15).
 
 ### SSD
 NVMe SSDs only work from Yosemite (10.10) onwards, requiring AHCI for Mavericks (10.9) and earlier. While regular SATA SSDs work, there's an issue with AppleAHCIPort.kext panic on Tiger, making AHCI unusable. Thus, using SATA controllers in IDE mode with AppleIntelPIIXATA.kext is necessary, with the inclusion of ATAPortInjector.kext for Haswell chipset support.
