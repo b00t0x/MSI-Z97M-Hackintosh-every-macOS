@@ -1,5 +1,5 @@
 # MSI Z97M Hackintosh runs every macOS
-Hackintosh EFI and guide repo for running every Intel macOS versions from Tiger (10.4) to Sonoma (14)
+Hackintosh EFI and guide repo for running every Intel macOS versions from Tiger (10.4) to Sequoia (15)
 
 ![Alt text](images/desktop.png)
 
@@ -31,9 +31,10 @@ Hackintosh EFI and guide repo for running every Intel macOS versions from Tiger 
 
 ## Software
 ### macOS
-* macOS Sonoma 14.3 (23D56)
-* macOS Ventura 13.6.4 (22G513)
-* macOS Monterey 12.7.3 (21H1015)
+* macOS Sequoia 15.0.1 (24A348)
+* macOS Sonoma 14.7 (23H124)
+* macOS Ventura 13.7 (22H123)
+* macOS Monterey 12.7.6 (21H1320)
 * macOS Big Sur 11.7.10(20G1427)
 * macOS Catalina 10.15.7 (19H2026)
 * macOS Mojave 10.14.6 (18G9323)
@@ -49,8 +50,8 @@ Hackintosh EFI and guide repo for running every Intel macOS versions from Tiger 
 * Mac OS X Tiger 10.4.11 (8S2167)
 
 ### Bootloader and patchers
-* [OpenCore](https://github.com/acidanthera/OpenCorePkg) 0.9.7
-* [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher) 1.3.0
+* [OpenCore](https://github.com/acidanthera/OpenCorePkg) 1.0.2
+* [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher) 2.0.2
 * [macOS Catalina Patcher](http://dosdude1.com/catalina/) 1.4.7
 * [macOS Mojave Patcher](http://dosdude1.com/mojave/) 1.3.7
 
@@ -83,3 +84,4 @@ Hackintosh EFI and guide repo for running every Intel macOS versions from Tiger 
 ![macOS 12 Monterey](images/12.png)
 ![macOS 13 Ventura](images/13.png)
 ![macOS 14 Sonoma](images/14.png)
+![macOS 14 Sequoia](images/15.png)
