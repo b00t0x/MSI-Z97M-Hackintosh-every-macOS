@@ -700,7 +700,7 @@
 				<key>MinKernel</key>
 				<string>8.0.0</string>
 				<key>Strategy</key>
-				<string>Exclude</string>
+				<string>Disable</string>
 			</dict>
 		</array>
 		<key>Emulate</key>
