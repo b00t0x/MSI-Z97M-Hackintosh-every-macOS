@@ -8,7 +8,7 @@ Refer to [OpenCore-Install-Guide](https://dortania.github.io/OpenCore-Install-Gu
 - [High Sierra (10.13)](#high-sierra-1013)
 - [Mojave (10.14)](#mojave-1014)
 - [Catalina (10.15)](#catalina-1015)
-- [Big Sur (11) to Sonoma (14)](#big-sur-11-to-sonoma-14)
+- [Big Sur (11) to Sequoia (15)](#big-sur-11-to-sequoia-15)
 - [Sierra (10.12)](#sierra-1012)
 - [Yosemite (10.10) / El Capitan (10.11)](#yosemite-1010--el-capitan-1011)
 - [Mavericks (10.9)](#mavericks-109)
@@ -65,7 +65,7 @@ After applying the change, boot the 10.15 installer USB (or 10.15 recovery volum
 ```
 Check `Legacy Video Card Patch` and select the 10.15 volume from `Change...`, then apply the patch.
 
-## Big Sur (11) to Sonoma (14)
+## Big Sur (11) to Sequoia (15)
 From macOS 11 onwards, you can use [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher), making it easier than 10.14/10.15.
 
 After macOS installation, launch OCLP and apply the patch from `Post-Install Root Patch`.
